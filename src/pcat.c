@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(int argc, char *argv[]) {
   if (argc < 2) {
@@ -6,7 +7,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  int error_count = 0;
+  bool errors = false;
 
   for (int i = 1; i < argc; i++) {
     FILE* fp = fopen(argv[i], "r");
@@ -19,11 +20,11 @@ int main(int argc, char *argv[]) {
       fclose(fp);
     } else {
       fprintf(stderr, "pcat: %s: file or directory does not exists\n", argv[i]);
-      error_count++;
+      errors = true;
     }
   }
   
-  if (error_count > 0) return 1;
+  if (errors) return 1;
 
   return 0;
 }
