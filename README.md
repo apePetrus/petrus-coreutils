@@ -7,6 +7,12 @@ I try not to use AI for helping with this project, but sometimes I use it to
 explain me some functions, behaviors and program's flow, or to understand the
 difference between some functions... and to make this Makefile :(
 
+## Current features
+
+**pecho**: an echo clone
+
+**pcat**: a cat clone
+
 ## Installing
 
 ```bash
