@@ -4,7 +4,7 @@ CFLAGS = -std=c99 -Wall -Wextra -Wpedantic -O2
 PREFIX ?= /usr/local
 BINDIR = $(PREFIX)/bin
 
-PROGS = pecho pcat
+PROGS = pecho pcat pls
 
 OBJS = $(addprefix obj/,$(addsuffix .o,$(PROGS)))
 
